@@ -1,0 +1,17 @@
+package main
+
+import (
+	"github.com/gin-gonic/gin"
+	"google.golang.org/grpc"
+	coursepb "course-service/proto"
+	userpb "user-service/proto"
+)
+
+func main() {
+	r := gin.Default()
+
+	userConn, _ := grpc.Dial("localhost:50051", grpc.WithInSecure())
+	userClient := userpb.NewUserServiceClient(userConn)
+
+	courseConn, 
+}

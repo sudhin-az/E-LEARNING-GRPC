@@ -1,0 +1,7 @@
+syntax = "proto3";
+
+package course;
+
+service CourseService {
+    rpc CreateCourse (CourseRequest) returns (CourseResponse);
+}
